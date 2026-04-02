@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-background text-white font-sans antialiased;
+    }
+}
+
+@layer components {
+    .glass-panel {
+        @apply bg-surface/80 backdrop-blur-md border border-white/10 shadow-xl;
+    }
+
+    .btn-primary {
+        @apply px-4 py-2 bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 text-white rounded-lg font-medium transition-all shadow-lg shadow-primary/25 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .btn-secondary {
+        @apply px-4 py-2 bg-surface hover:bg-surface/80 border border-white/10 text-white rounded-lg font-medium transition-all;
+    }
+}
